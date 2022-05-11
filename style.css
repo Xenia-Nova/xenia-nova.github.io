@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before{
+    padding: 0%;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s ease;
+}
+
+body{
+    background-color: rgb(227, 222, 222);
+    background-image: url("img/patternwhite.png");
+    background-repeat: repeat;
+}
+
+.main{
+    border: 5px solid black;
+    margin: 20px 30px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.header{
+    border: 2px solid black;
+    margin: 60px auto;
+    padding: 20px 20px;
+    width: 750px;
+    text-align: center;
+    color: aliceblue;
+    font-size: large;
+    background-image: url("img/pattern.png");
+}
+
+.list{
+    margin: 10px 10px;
+    background-color: gray;
+    text-align: center;
+}
+
+li{
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #8AB8CC;
+    border-radius: 50%;
+    font-size: 120%;
+    transition: 0.5s;
+    color: black;
+    box-shadow: 24px -16px 21px 11px rgba(163, 220, 246, 0.5);
+}
+
+h1{
+    padding: 30px 0;
+    font-family: "Calibri Light";
+    font-size: 300%;
+    background-color: #cfbaf3;
+}
+
+p{
+    text-align: left;
+}
+
+.chapter1, .chapter2, .chapter3, .chapter4, .chapter5 {
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+.child div:nth-child(odd)  h2 {
+    background-color: #aee8a6;
+    text-align: left;
+}
+
+.child div:nth-child(even)  h2 {
+    background-color: #eee89a;
+    text-align: right;
+}
+
+.bottom{
+    padding: 30px 30px;
+    background-color: lightslategray;
+    text-align: center;
+}
+
+.bottom a{
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+}
+
+.bottom a:hover{
+    cursor: pointer;
+    font-size: xxx-large;
+    box-shadow: 24px -16px 21px 11px rgba(163, 220, 246, 0.5);
+}
