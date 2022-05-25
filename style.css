@@ -1,111 +1,215 @@
 *,
 *::after,
 *::before{
-    padding: 0%;
-    border: 0;
-    margin: 0;
-    box-sizing: border-box;
-    transition: 0.5s ease;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-    background-color: rgb(227, 222, 222);
-    background-image: url("img/patternwhite.png");
-    background-repeat: repeat;
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #555;
 }
 
-.main{
-    border: 5px solid black;
-    margin: 20px 30px;
-    font-family: 'Roboto Flex', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-.header{
-    border: 2px solid black;
-    margin: 60px auto;
-    padding: 20px 20px;
-    width: 750px;
-    text-align: center;
-    color: aliceblue;
-    font-size: large;
-    background-image: url("img/pattern.png");
+img:hover{
+  transform: scale(1.1);
+  box-shadow: -10px -8px 13px -5px rgba(34, 60, 80, 0.6);
 }
+
+a:hover{
+  text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+  font-size: 35px;
+  transition: .5s;
+}
+
+h2{
+  color: black;
+  background-color: pink;
+}
+
+.price{
+  color: hotpink;
+  font-size: 33px;
+  font-style: italic;
+}
+
+/*-----------------------------------------------for all*/
 
 .list{
-    margin: 10px 10px;
-    background-color: gray;
+  min-height: 100vh;
+  position: relative;
+}
+
+.list .card{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapperAll{
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+ .firstpage .card .foto{
+   display: inline-block;
+   width: 50%;
+   padding: 30px;
+ }
+
+.firstpage .card .foto img{
+  transition: .5s
+}
+
+.firstpage .card .info{
+  display: inline-block;
+  width: 50%;
+  padding: 45px;
+  vertical-align: top;
+}
+
+.firstpage .card .info a{
+  display: block;
+  text-decoration: none;
+  position: center;
+  color: darkgreen;
+  text-align: center;
+}
+/*--------------------------------------inline done*/
+
+table {
+  border-collapse: collapse;
+}
+
+.secondpage .card .foto{
+  width: 50%;
+  padding: 30px;
+}
+
+.secondpage .card .info{
+  width: 50%;
+  padding: 40px;
+}
+
+.secondpage .card .info a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: center;
+  color: darkgreen;
+}
+
+.secondpage .card .foto img{
+  transition: .5s;
+}
+
+/*----------------------------------------------------table done*/
+
+.thirdpage .card .info{
+  padding: 40px;
+  vertical-align: top;
+}
+
+.thirdpage .card .info h2{
+  display: flex;
+}
+
+.thirdpage .card .info a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: center;
+  color: darkgreen;
+}
+
+.thirdpage .card .foto{
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+
+.thirdpage .card .foto img{
+  width: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*--------------------------------------------------float done*/
+
+.pageWrapper{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageWrapper .foto img{
+  padding: 40px;
+  transition: .5s;
+}
+
+.pageWrapper .info{
+  padding: 30px;
+}
+
+.pageWrapper .info a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: darkgreen;
+}
+ /*--------------------------------------------------------flex done*/
+
+
+@media screen and (max-width: 860px) {
+  .firstpage .card .foto,
+  .secondpage .card .foto,
+  .thirdpage .card .foto,
+  .firstpage .card .foto {
     text-align: center;
-}
+  }
 
-li{
-    display: inline-block;
-}
-
-.menu a {
+  .firstpage .card .foto,
+  .firstpage .card .info {
     display: block;
-    padding: 5px 15px;
-    color: white;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    background: #8AB8CC;
-    border-radius: 50%;
-    font-size: 120%;
-    transition: 0.5s;
-    color: black;
-    box-shadow: 24px -16px 21px 11px rgba(163, 220, 246, 0.5);
-}
-
-h1{
-    padding: 30px 0;
-    font-family: "Calibri Light";
-    font-size: 300%;
-    background-color: #cfbaf3;
-}
-
-p{
-    text-align: left;
-}
-
-.chapter1, .chapter2, .chapter3, .chapter4, .chapter5 {
-    border: 1px solid gray;
-    padding: 20px;
-}
-
-img {
+    margin: 0 auto;
     width: 100%;
-    margin: 10px 0 20px 0;
-}
+  }
 
-img:hover {
-    opacity: 0.5;
-}
+  .secondpage tr {
+    display: flex;
+    flex-direction: column;
+  }
 
-.child div:nth-child(odd)  h2 {
-    background-color: #aee8a6;
-    text-align: left;
-}
+  .secondpage .card .foto,
+  .secondpage .card .info {
+    width: 100%;
+  }
 
-.child div:nth-child(even)  h2 {
-    background-color: #eee89a;
-    text-align: right;
-}
+  .thirdpage .card .foto,
+  .thirdpage .card .info {
+    float: initial;
+    margin: 0 auto;
+  }
 
-.bottom{
-    padding: 30px 30px;
-    background-color: lightslategray;
-    text-align: center;
-}
+  .fourpage .pageWrapper {
+    flex-direction: column;
+  }
 
-.bottom a{
-    text-decoration: none;
-    font-size: xx-large;
-    color: black;
-}
-
-.bottom a:hover{
-    cursor: pointer;
-    font-size: xxx-large;
-    box-shadow: 24px -16px 21px 11px rgba(163, 220, 246, 0.5);
 }
